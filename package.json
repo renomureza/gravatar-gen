@@ -1,10 +1,10 @@
 {
-  "name": "gravatar-js",
+  "name": "gravatar-url",
   "version": "0.0.1",
   "description": "A library to generate Gravatar URLs Based on gravatar specs (uses sha256 instead of md5), strongly typed, support image & profile URL.",
   "main": "dist/index.js",
   "type": "module",
-  "repository": "github:renomureza/gravatar-js",
+  "repository": "github:renomureza/gravatar-url",
   "keywords": [
     "gravatar",
     "gravatar-js"
