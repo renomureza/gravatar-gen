@@ -103,9 +103,9 @@ jobs:
           git push origin && git push --tags
 
       # Read version changelog
-      - id: get-changelog
+      - id: Get Changelog
         name: Get version changelog
-        uses: superfaceai/release-changelog-action@v1
+        uses: superfaceai/release-changelog-action@v2
         with:
           path-to-changelog: CHANGELOG.md
           version: ${{ env.NEW_VERSION }}
