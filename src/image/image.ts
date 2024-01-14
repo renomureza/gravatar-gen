@@ -7,7 +7,7 @@ import {
 } from "./constants.js";
 
 const urlModifierFns: {
-  [K in keyof GetImageUrlOptions]: Function;
+  [K in keyof ImageOptions]: Function;
 } = {
   size: (url: URL, value: number) => {
     url.searchParams.set("s", String(value));
@@ -44,7 +44,7 @@ const urlModifierFns: {
   },
 };
 
-function mapOptsToUrl(urlWithHash: URL, opts: GetImageUrlOptions) {
+function mapOptsToUrl(urlWithHash: URL, opts: ImageOptions) {
   if (!Object.keys(opts).length) return urlWithHash;
 
   const urlWithOpts = (
@@ -57,7 +57,7 @@ function mapOptsToUrl(urlWithHash: URL, opts: GetImageUrlOptions) {
   return urlWithOpts.toString();
 }
 
-type GetImageUrlOptions = {
+type ImageOptions = {
   /**
    * The .jpg file extension will be appended to the URL if true.
    *
@@ -121,7 +121,7 @@ type GetImageUrlOptions = {
  * @param opts - Options for generating Gravatar images.
  *
  */
-export async function image(email: string, opts: GetImageUrlOptions = {}) {
+export async function image(email: string, opts: ImageOptions = {}) {
   const hash = await sha256(email);
   const url = new URL(`${AVATAR_BASE_URL}/${hash}`);
   const result = mapOptsToUrl(url, opts);
