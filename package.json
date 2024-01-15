@@ -12,7 +12,7 @@
     "gravatar-js"
   ],
   "files": [
-    "dist/"
+    "dist"
   ],
   "scripts": {
     "test": "vitest run",
