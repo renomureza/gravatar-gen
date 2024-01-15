@@ -47,6 +47,10 @@ jobs:
       - name: Run tests
         run: pnpm test
 
+      # Build Typescript
+      - name: Run Build
+        run: pnpm build
+
       # Configure Git
       - name: Git configuration
         run: |
