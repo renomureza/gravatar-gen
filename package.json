@@ -1,0 +1,25 @@
+{
+  "name": "gravatar-gen",
+  "version": "0.0.9",
+  "license": "MIT",
+  "description": "A library to generate Gravatar URLs Based on gravatar specs (uses sha256 instead of md5), strongly typed, support image & profile URL.",
+  "author": "Renova M. Reza",
+  "main": "dist/index.js",
+  "type": "module",
+  "repository": "github:renomureza/gravatar-gen",
+  "keywords": [
+    "gravatar",
+    "gravatar-js"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  }
+}
