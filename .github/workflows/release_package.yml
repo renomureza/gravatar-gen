@@ -115,6 +115,9 @@ jobs:
           version: ${{ env.NEW_VERSION }}
           operation: read
 
+      - name: Log changelog
+        run: echo ${{ steps.get-changelog.outputs.changelog }}
+
       # Update GitHub release with changelog
       - name: Update GitHub release documentation
         uses: softprops/action-gh-release@v1
