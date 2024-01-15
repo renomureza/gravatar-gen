@@ -1,6 +1,6 @@
 {
   "name": "gravatar-gen",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "MIT",
   "description": "A library to generate Gravatar URLs Based on gravatar specs (uses sha256 instead of md5), strongly typed, support image & profile URL.",
   "author": "Renova M. Reza",
